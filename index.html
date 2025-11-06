@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bowen Nelson - Class Video</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f4f4;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px 10px;
+        }
+
+        h1 {
+            color: #333;
+            margin-bottom: 10px;
+            font-size: 1.8rem;
+        }
+
+        p {
+            color: #555;
+            margin-bottom: 15px;
+            max-width: 800px;
+        }
+
+        .video-container {
+            position: relative;
+            width: 100%;
+            max-width: 500px;           /* Limits size on large screens */
+            margin: 20px auto;
+            aspect-ratio: 9 / 16;       /* Perfect for vertical video */
+            border: none;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        footer {
+            margin-top: auto;
+            padding-top: 20px;
+            color: #777;
+            font-size: 0.9rem;
+        }
+
+        /* Optional: Fullscreen on small screens */
+        @media (max-width: 640px) {
+            .video-container {
+                max-width: 100%;
+                height: 80vh;           /* Take most of the screen height */
+                aspect-ratio: unset;    /* Let height control it */
+            }
+            body {
+                padding: 15px 5px;
+            }
+            h1 { font-size: 1.5rem; }
+        }
+    </style>
+</head>
+<body>
+    <h1>Digital Literacy Video Project</h1>
+    <p>Here's my 2-minute video submission.</p>
+
+    <div class="video-container">
+        <iframe
+            src="https://www.youtube.com/embed/UB30F1Nfl7M?rel=0&modestbranding=1&playsinline=1"
+            title="Class Video"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen>
+        </iframe>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Bowen Nelson</p>
+    </footer>
+</body>
+</html>
