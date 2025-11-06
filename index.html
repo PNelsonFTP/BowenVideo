@@ -19,17 +19,17 @@
         h1 { font-size: 1.9rem; color: #333; }
         p  { color: #555; max-width: 800px; text-align: center; }
 
-        /* ---- 9:16 PLAYER (YouTube Short) ---- */
+        /* 9:16 YouTube Short Container */
         .short-container {
             position: relative;
             width: 100%;
-            max-width: 560px;               /* YouTube Shorts recommended */
-            aspect-ratio: 9 / 16;           /* True 9:16 */
+            max-width: 560px;
+            aspect-ratio: 9 / 16;
             margin: 0 auto;
             border-radius: 12px;
             overflow: hidden;
             box-shadow: 0 6px 20px rgba(0,0,0,.15);
-            background: #000;               /* Fallback if iframe fails */
+            background: #000;
         }
 
         iframe {
@@ -40,7 +40,7 @@
             border: none;
         }
 
-        /* ---- MOBILE: FULL SCREEN ---- */
+        /* Mobile: Full Screen */
         @media (max-width: 768px) {
             body { padding: 0; gap: 0.8rem; }
             h1 { font-size: 1.6rem; }
@@ -70,10 +70,10 @@
     <h1>Digital Literacy Short</h1>
     <p>Here’s my 2-minute YouTube Short submission.</p>
 
-    <!-- REPLACE VIDEO_ID_HERE WITH YOUR SHORT ID -->
+    <!-- REPLACE WITH YOUR ACTUAL VIDEO ID -->
     <div class="short-container">
         <iframe
-            src="https://www.youtube.com/embed/VIDEO_ID_HERE?rel=0&modestbranding=1&playsinline=1"
+            src="https://www.youtube.com/embed/UB30F1Nfl7M?autoplay=1&mute=1&playsinline=1&rel=0&modestbranding=1"
             title="Digital Literacy Short"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             allowfullscreen>
