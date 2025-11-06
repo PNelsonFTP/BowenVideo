@@ -3,14 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bowen Nelson – Digital Literacy Video</title>
+    <title>Bowen Nelson – Digital Literacy Short</title>
     <style>
-        /* ---- Reset & basic layout ---- */
-        *, *::before, *::after { box-sizing: border-box; margin:0; padding:0; }
-        html, body { height:100%; }
+        *, *::before, *::after { box-sizing:border-box; margin:0; padding:0; }
+        html, body { height:100%; font-family:Arial,Helvetica,sans-serif; background:#f4f4f4; }
+
         body {
-            font-family: Arial, Helvetica, sans-serif;
-            background:#f4f4f4;
             display:flex;
             flex-direction:column;
             align-items:center;
@@ -19,19 +17,19 @@
         }
 
         h1 { font-size:1.9rem; color:#333; }
-        p  { color:#555; max-width:800px; }
+        p  { color:#555; max-width:800px; text-align:center; }
 
-        /* ---- Video container ---- */
-        .video-wrapper {
+        /* ---------- PLAYER ---------- */
+        .short-wrapper {
             position:relative;
-            width:100%;                     /* full width of its parent */
-            max-width:1200px;               /* optional cap for huge monitors */
-            aspect-ratio:16 / 9;            /* native YouTube player ratio */
+            width:100%;
+            max-width:560px;               /* YouTube Shorts recommended width */
             margin:0 auto;
             border-radius:12px;
             overflow:hidden;
             box-shadow:0 6px 20px rgba(0,0,0,.15);
         }
+
         iframe {
             position:absolute;
             inset:0;
@@ -40,31 +38,49 @@
             border:none;
         }
 
-        /* ---- Footer sticks to bottom on short pages ---- */
-        footer { margin-top:auto; padding-top:1rem; color:#777; font-size:.9rem; }
-
-        /* ---- Mobile tweaks (optional) ---- */
-        @media (max-width:640px) {
-            .video-wrapper { max-width:100%; height:70vh; aspect-ratio:unset; }
+        /* ---------- MOBILE FULL-SCREEN (crop side bars) ---------- */
+        @media (max-width:768px) {
+            body { padding:0; gap:0.8rem; }
             h1 { font-size:1.6rem; }
+            p  { font-size:0.95rem; }
+
+            .short-wrapper {
+                width:100vw;
+                height:100vh;
+                max-width:unset;
+                border-radius:0;
+                box-shadow:none;
+            }
+
+            iframe {
+                /* 16:9 player → 9:16 crop = 177.78% width */
+                width:177.78vh;
+                height:100vh;
+                max-width:177.78vh;
+                max-height:100vh;
+                top:50%; left:50%;
+                transform:translate(-50%,-50%);
+            }
         }
+
+        footer { margin-top:auto; padding:1rem 0; color:#777; font-size:.9rem; text-align:center; }
     </style>
 </head>
 <body>
 
-    <h1>Digital Literacy Video Project</h1>
-    <p>Here’s my 2-minute video submission.</p>
+    <h1>Digital Literacy Short</h1>
+    <p>Here’s my 2-minute YouTube Short submission.</p>
 
-    <div class="video-wrapper">
+    <div class="short-wrapper">
         <iframe
-            src="hhttps://youtube.com/shorts/7pcS1W7_QdU"
-            title="Class Video"
+            src="https://www.youtube.com/embed/UB30F1Nfl7M?rel=0&modestbranding=1&playsinline=1"
+            title="Digital Literacy Short"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             allowfullscreen>
         </iframe>
     </div>
 
-    <footer>&copy; 2025 Bowen Nelson</footer>
+    <footer>© 2025 Bowen Nelson</footer>
 
 </body>
 </html>
