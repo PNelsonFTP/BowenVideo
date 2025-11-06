@@ -3,83 +3,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bowen Nelson - Class Video</title>
+    <title>Bowen Nelson – Digital Literacy Video</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
+        /* ---- Reset & basic layout ---- */
+        *, *::before, *::after { box-sizing: border-box; margin:0; padding:0; }
+        html, body { height:100%; }
         body {
-            font-family: Arial, sans-serif;
-            background: #f4f4f4;
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            padding: 20px 10px;
+            font-family: Arial, Helvetica, sans-serif;
+            background:#f4f4f4;
+            display:flex;
+            flex-direction:column;
+            align-items:center;
+            padding:20px 10px;
+            gap:1rem;
         }
 
-        h1 {
-            color: #333;
-            margin-bottom: 10px;
-            font-size: 1.8rem;
-        }
+        h1 { font-size:1.9rem; color:#333; }
+        p  { color:#555; max-width:800px; }
 
-        p {
-            color: #555;
-            margin-bottom: 15px;
-            max-width: 800px;
+        /* ---- Video container ---- */
+        .video-wrapper {
+            position:relative;
+            width:100%;                     /* full width of its parent */
+            max-width:1200px;               /* optional cap for huge monitors */
+            aspect-ratio:16 / 9;            /* native YouTube player ratio */
+            margin:0 auto;
+            border-radius:12px;
+            overflow:hidden;
+            box-shadow:0 6px 20px rgba(0,0,0,.15);
         }
-
-        .video-container {
-            position: relative;
-            width: 100%;
-            max-width: 500px;           /* Limits size on large screens */
-            margin: 20px auto;
-            aspect-ratio: 9 / 16;       /* Perfect for vertical video */
-            border: none;
-            border-radius: 12px;
-            overflow: hidden;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-        }
-
         iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            border: none;
+            position:absolute;
+            inset:0;
+            width:100%;
+            height:100%;
+            border:none;
         }
 
-        footer {
-            margin-top: auto;
-            padding-top: 20px;
-            color: #777;
-            font-size: 0.9rem;
-        }
+        /* ---- Footer sticks to bottom on short pages ---- */
+        footer { margin-top:auto; padding-top:1rem; color:#777; font-size:.9rem; }
 
-        /* Optional: Fullscreen on small screens */
-        @media (max-width: 640px) {
-            .video-container {
-                max-width: 100%;
-                height: 80vh;           /* Take most of the screen height */
-                aspect-ratio: unset;    /* Let height control it */
-            }
-            body {
-                padding: 15px 5px;
-            }
-            h1 { font-size: 1.5rem; }
+        /* ---- Mobile tweaks (optional) ---- */
+        @media (max-width:640px) {
+            .video-wrapper { max-width:100%; height:70vh; aspect-ratio:unset; }
+            h1 { font-size:1.6rem; }
         }
     </style>
 </head>
 <body>
-    <h1>Digital Literacy Video Project</h1>
-    <p>Here's my 2-minute video submission.</p>
 
-    <div class="video-container">
+    <h1>Digital Literacy Video Project</h1>
+    <p>Here’s my 2-minute video submission.</p>
+
+    <div class="video-wrapper">
         <iframe
             src="https://www.youtube.com/embed/UB30F1Nfl7M?rel=0&modestbranding=1&playsinline=1"
             title="Class Video"
@@ -88,8 +64,7 @@
         </iframe>
     </div>
 
-    <footer>
-        <p>&copy; 2025 Bowen Nelson</p>
-    </footer>
+    <footer>&copy; 2025 Bowen Nelson</footer>
+
 </body>
 </html>
